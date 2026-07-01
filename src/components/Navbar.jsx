@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,6 @@ function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full bg-slate-950 shadow-lg z-50">
       <nav className="max-w-7xl mx-auto h-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-
         {/* Logo */}
         <a
           href="#home"
@@ -41,13 +41,18 @@ function Navbar() {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <button className="border border-blue-500 px-5 py-2 rounded-lg hover:bg-blue-600 transition">
+          <Link
+            to="/login"
+            className="border border-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition"
+          >
             Login
-          </button>
-
-          <button className="bg-blue-600 px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+          </Link>
+          <Link
+            to="/register"
+            className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition"
+          >
             Register
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -68,7 +73,6 @@ function Navbar() {
         }`}
       >
         <div className="bg-slate-900 text-white">
-
           {navLinks.map((item) => (
             <a
               key={item.name}
@@ -81,15 +85,21 @@ function Navbar() {
           ))}
 
           <div className="flex flex-col gap-3 px-6 py-5 border-t border-slate-800">
-
-            <button className="border border-blue-500 rounded-lg py-2 hover:bg-blue-600 transition">
+            <Link
+              to="/login"
+              onClick={closeMenu}
+              className="border border-blue-500 rounded-lg py-2 text-center hover:bg-blue-600 transition"
+            >
               Login
-            </button>
+            </Link>
 
-            <button className="bg-blue-600 rounded-lg py-2 hover:bg-blue-700 transition">
+            <Link
+              to="/register"
+              onClick={closeMenu}
+              className="bg-blue-600 rounded-lg py-2 text-center hover:bg-blue-700 transition"
+            >
               Register
-            </button>
-
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,124 @@
-{
-    "employee":[],
-    "department":[],
-    "$schema": "./node_modules/json-server/schema.json"
 
+
+{
+  "users": [
+    {
+      "id": 1,
+      "employeeId": "EMP001",
+      "firstName": "Dhinesh",
+      "lastName": "Kumar",
+      "email": "admin@ems.com",
+      "password": "123456",
+      "role": "Admin",
+      "phone": "9876543210",
+      "gender": "Male",
+      "dob": "1996-06-10",
+      "departmentId": 1,
+      "designation": "System Administrator",
+      "joiningDate": "2024-01-01",
+      "employmentType": "Full Time",
+      "status": "Active",
+      "salary": 75000,
+      "workLocation": "Chennai",
+
+      "address": {
+        "line1": "123 Main Street",
+        "line2": "",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "country": "India",
+        "zip": "600001"
+      },
+
+      "skills": [
+        "React",
+        "Node.js",
+        "MongoDB"
+      ],
+
+      "notes": "System Administrator"
+    },
+
+    {
+      "id": 2,
+      "employeeId": "EMP002",
+      "firstName": "Rahul",
+      "lastName": "Sharma",
+      "email": "rahul@gmail.com",
+      "password": "123456",
+      "role": "Employee",
+      "phone": "9999999999",
+      "gender": "Male",
+      "departmentId": 2,
+      "designation": "HR Executive",
+      "joiningDate": "2025-02-01",
+      "employmentType": "Full Time",
+      "status": "Active",
+      "salary": 35000,
+      "workLocation": "Bangalore",
+
+      "address": {
+        "line1": "45 MG Road",
+        "line2": "",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "country": "India",
+        "zip": "560001"
+      },
+
+      "skills": [
+        "Recruitment",
+        "Communication"
+      ],
+
+      "notes": ""
+    }
+  ],
+
+  "departments": [
+    {
+      "id": 1,
+      "name": "IT"
+    },
+    {
+      "id": 2,
+      "name": "HR"
+    },
+    {
+      "id": 3,
+      "name": "Finance"
+    }
+  ],
+
+  "activityLogs": [
+    {
+      "id": 1,
+      "userId": 1,
+      "action": "Added Employee",
+      "date": "2026-07-01 10:30"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "employeeId": "EMP001",
+      "firstName": "Dhinesh",
+      "lastName": "Kumar",
+      "email": "admin@ems.com",
+      "password": "",
+      "role": "Admin",
+      "isRegistered": false
+    },
+    {
+      "id": 2,
+      "employeeId": "EMP002",
+      "firstName": "Rahul",
+      "lastName": "Sharma",
+      "email": "rahul@gmail.com",
+      "password": "",
+      "role": "Employee",
+      "isRegistered": false
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

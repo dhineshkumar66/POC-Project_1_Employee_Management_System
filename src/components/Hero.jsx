@@ -1,116 +1,117 @@
 import heroImage from "../assets/images/hero.jpeg";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
     <section
       id="home"
-      className="bg-gradient-to-r from-slate-950 via-slate-900 to-blue-950 min-h-screen flex items-center"
+      className="min-h-screen bg-gradient-to-r from-slate-950 via-slate-900 to-blue-950 flex items-center pt-20"
     >
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12 py-12">
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        {/* Hero Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left */}
+          <div className="order-2 lg:order-1 text-center lg:text-left">
 
-          <div>
-
-            <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm">
+            <span className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
               Welcome to EMS
             </span>
 
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mt-6 leading-tight">
-              Employee <br />
-              Management <br />
+            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+              Employee
+              <br />
+              Management
+              <br />
               System
             </h1>
 
-            <p className="text-gray-300 mt-6 text-lg leading-8">
+            <p className="mt-6 text-gray-300 text-base sm:text-lg leading-7 max-w-xl mx-auto lg:mx-0">
               Simplify employee management, attendance, departments,
               reports, and organizational workflows through one secure
               and easy-to-use platform.
             </p>
 
-            <div className="flex gap-5 mt-10">
+            <div className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
 
-              <button className="bg-blue-600 hover:bg-blue-700 transition px-7 py-4 rounded-lg text-white font-semibold">
+              <Link
+                to="#home"
+                className="bg-blue-600 hover:bg-blue-700 transition duration-300 px-8 py-3 rounded-lg text-white font-semibold text-center"
+              >
                 Get Started
-              </button>
+              </Link>
 
-              <button className="border border-white hover:bg-white hover:text-slate-900 transition px-7 py-4 rounded-lg text-white font-semibold">
+              <a
+                href="#features"
+                className="border border-white hover:bg-white hover:text-slate-900 transition duration-300 px-8 py-3 rounded-lg text-white font-semibold text-center"
+              >
                 Learn More
-              </button>
+              </a>
 
             </div>
 
           </div>
 
           {/* Right */}
-
-          <div>
+          <div className="order-1 lg:order-2 flex justify-center">
 
             <img
               src={heroImage}
               alt="Employee Management"
-              className="w-full animate-bounce"
+              className="w-full max-w-xs sm:max-w-md lg:max-w-xl xl:max-w-2xl h-auto object-contain"
+              loading="eager"
+              decoding="async"
             />
 
           </div>
 
         </div>
 
+        {/* Statistics */}
+        {/* <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-600">
+              500+
+            </h2>
+            <p className="mt-2 text-gray-600">
+              Companies
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-600">
+              25K+
+            </h2>
+            <p className="mt-2 text-gray-600">
+              Employees
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-600">
+              99%
+            </h2>
+            <p className="mt-2 text-gray-600">
+              Satisfaction
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl p-6 shadow-lg text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-600">
+              24/7
+            </h2>
+            <p className="mt-2 text-gray-600">
+              Support
+            </p>
+          </div>
+
+        </div> */}
+
       </div>
     </section>
   );
 }
-<div className="grid md:grid-cols-4 gap-8 mt-20">
 
-    <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-
-        <h2 className="text-4xl font-bold text-blue-600">
-            500+
-        </h2>
-
-        <p className="mt-2">
-            Companies
-        </p>
-
-    </div>
-
-    <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-
-        <h2 className="text-4xl font-bold text-blue-600">
-            25K+
-        </h2>
-
-        <p className="mt-2">
-            Employees
-        </p>
-
-    </div>
-
-    <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-
-        <h2 className="text-4xl font-bold text-blue-600">
-            99%
-        </h2>
-
-        <p className="mt-2">
-            Satisfaction
-        </p>
-
-    </div>
-
-    <div className="bg-white rounded-xl p-8 shadow-lg text-center">
-
-        <h2 className="text-4xl font-bold text-blue-600">
-            24/7
-        </h2>
-
-        <p className="mt-2">
-            Support
-        </p>
-
-    </div>
-
-</div>
 export default Hero;
